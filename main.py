@@ -11,9 +11,10 @@ def main():
             
             start = timer()
             with open(f"{path}\program.py", 'w') as file:
-                for i in range(lines-1):
+                for i in range(lines):
                     number = random.randint(0, lines)
-                    file.write(f'print("{number} + 1 = {number+1}") \n')
+                    file.write(f'print("{number} + 1 = {number+1}")\n')
+                file.close()
                 
             end = timer()
             print(f"It took {end-start} second(s) to write the program with {lines} total lines.")
